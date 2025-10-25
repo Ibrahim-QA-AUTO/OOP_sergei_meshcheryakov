@@ -59,7 +59,8 @@ class Person:
         return f"Имя : {self.name}, возраст: {self.age}"
 
     def __del__(self):
-        return f"Удален объект: {self.name}"
+        print(f"Объект {self.name} удалён")
+
 man = Person("Володя", 23)
 print(man.show_info())
 del man
@@ -69,11 +70,11 @@ del man
 # ======================================
 class Rectangle:
     def __init__(self, width=1, height=1):
-        self.wight = width
+        self.widht = width
         self.height = height
 
     def area(self):
-        return self.wight * self.height
+        return self.widht * self.height
 
 arg1 = Rectangle()
 print(arg1.area())
